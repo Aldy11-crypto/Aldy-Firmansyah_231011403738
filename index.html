@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Nama Kamu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .about {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .profile-card {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .photo {
+                width: 120px;
+                height: 120px;
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <!-- Foto Profile -->
+        <img src="WhatsApp Image 2025-06-22 at 18.26.50.jpeg" alt="WhatsApp Image 2025-06-22 at 18.26.50" class="photo">
+        
+        <!-- Nama -->
+        <h1>Aldy Firmansyah</h1>
+        <p class="subtitle">Mahasiswa IT UNPAM</p>
+        
+        <!-- Tentang Diri -->
+        <div class="about">
+            <p>Halo! Saya adalah seorang mahasiswa semester 4 teknik Informatika. Saya suka belajar hal-hal baru dan selalu antusias untuk mengeksplorasi dunia digital.</p>
+            
+            <p>Saat ini saya sedang fokus mempelajari HTML,CSS, SQL, Python untuk bisa menjadi seorang Data Analyst yang hebat yeyy.</p>
+        </div>
+    </div>
+</body>
+</html>
