@@ -1,102 +1,107 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - Nama Kamu</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplikasi Cuaca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+    body {
+      background: linear-gradient(to bottom right, #a1e3ff, #64b5f6);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .profile-card {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
-            width: 100%;
-        }
+    .card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
 
-        .photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            margin: 0 auto 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      color: #333;
+    }
 
-        h1 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
+    input {
+      padding: 0.6rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px 0 0 10px;
+      outline: none;
+      width: 65%;
+      font-size: 1rem;
+    }
 
-        .subtitle {
-            color: #666;
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
+    button {
+      padding: 0.6rem 1rem;
+      border: none;
+      background-color: #3b82f6;
+      color: white;
+      font-weight: 500;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+      font-size: 1rem;
+    }
 
-        .about {
-            color: #555;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            text-align: left;
-        }
+    .result {
+      margin-top: 1.5rem;
+    }
 
-        /* Mobile */
-        @media (max-width: 768px) {
-            .profile-card {
-                padding: 2rem;
-            }
+    .result h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #333;
+    }
 
-            h1 {
-                font-size: 2rem;
-            }
+    .result p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: #444;
+    }
 
-            .photo {
-                width: 120px;
-                height: 120px;
-                font-size: 3rem;
-            }
-        }
-    </style>
+    #icon {
+      margin-top: 1rem;
+      width: 70px;
+      height: 70px;
+    }
+
+    @media (max-width: 500px) {
+      input {
+        width: 60%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="profile-card">
-        <!-- Foto Profile -->
-        <img src="WhatsApp Image 2025-06-22 at 18.26.50.jpeg" alt="WhatsApp Image 2025-06-22 at 18.26.50" class="photo">
-        
-        <!-- Nama -->
-        <h1>Aldy Firmansyah</h1>
-        <p class="subtitle">Mahasiswa IT UNPAM</p>
-        
-        <!-- Tentang Diri -->
-        <div class="about">
-            <p>Halo! Saya adalah seorang mahasiswa semester 4 teknik Informatika. Saya suka belajar hal-hal baru dan selalu antusias untuk mengeksplorasi dunia digital.</p>
-            
-            <p>Saat ini saya sedang fokus mempelajari HTML,CSS, SQL, Python untuk bisa menjadi seorang Data Analyst yang hebat yeyy.</p>
-        </div>
+  <div class="card">
+    <h1>Aplikasi Cuaca</h1>
+    <div>
+      <input type="text" id="city" placeholder="Masukkan kota" />
+      <button id="getWeather">Cari</button>
     </div>
+    <div class="result hidden" id="weather">
+      <h2 id="location"></h2>
+      <p id="temperature"></p>
+      <p id="description"></p>
+      <img id="icon" alt="Icon Cuaca" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
